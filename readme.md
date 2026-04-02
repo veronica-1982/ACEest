@@ -108,3 +108,9 @@ docker build -t fitness-app .
 docker run --rm fitness-app pytest -v
 docker run -d -p 5000:5000 --name test_container fitness-app
 curl http://localhost:5000
+<img width="1702" height="961" alt="image" src="https://github.com/user-attachments/assets/06a59434-18c0-4c07-90de-9bb1e34c9c67" />
+<img width="1570" height="918" alt="image" src="https://github.com/user-attachments/assets/07149dd6-6581-4c1f-b339-8f2e6571be93" />
+<img width="1561" height="946" alt="image" src="https://github.com/user-attachments/assets/91c00030-b2a3-4e0f-9171-2884d7aab35f" />
+
+
+
