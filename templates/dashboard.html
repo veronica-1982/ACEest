@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Client Dashboard</h2>
+<pre id="bmi"></pre>
+
+<script>
+async function loadBMI(name){
+    const res = await fetch(`/bmi/${name}`)
+    const data = await res.json()
+    document.getElementById("bmi").innerText = JSON.stringify(data, null, 2)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clients</title>
+</head>
+<body>
+    <h1>Clients</h1>
+
+    <form id="form">
+        <input name="name" placeholder="Name">
+        <input name="weight" placeholder="Weight">
+        <select name="program">
+            {% for p in programs %}
+            <option value="{{p}}">{{p}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Save</button>
+    </form>
+
+    <ul>
+        {% for c in clients %}
+        <li><a href="/client/{{c.name}}">{{c.name}}</a></li>
+        {% endfor %}
+    </ul>
+
+<script>
+document.getElementById("form").onsubmit = async (e) => {
+    e.preventDefault()
+
+    const form = e.target
+    const data = {
+        name: form.name.value,
+        weight: form.weight.value,
+        program: form.program.value
+    }
+
+    await fetch('/api/save_client', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    })
+
+    location.reload()
+}
+</script>
+</body>
+</html>
