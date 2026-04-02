@@ -21,27 +21,27 @@ Built with Flask, SQLite, Docker, and Pytest, and integrated with CI/CD pipeline
 - Dockerized for easy deployment
 - GitHub Actions CI pipeline (Lint + Test + Build)
 
-**Project Structure**
+## Project Structure
+
 ACEest/
 │
-├── app.py                 # Flask entry point
-├── routes.py              # API routes
-├── models.py              # Database models
-├── database.py            # DB initialization
-├── utils.py               # Business logic (programs, BMI)
+├── app.py                 # Flask entry point  
+├── routes.py              # API routes  
+├── models.py              # Database models  
+├── database.py            # DB initialization  
+├── utils.py               # Business logic (programs, BMI)  
 │
-├── templates/             # HTML UI
-├── static/                # CSS / JS
-├── instance/              # SQLite DB (auto-created)
+├── templates/             # HTML UI  
+├── static/                # CSS / JS  
+├── instance/              # SQLite DB (auto-created)  
 │
-├── tests/                 # Pytest test cases
-│   ├── conftest.py
-│   └── test_routes.py
+├── tests/                 # Pytest test cases  
+│   ├── conftest.py  
+│   └── test_routes.py  
 │
-├── Dockerfile             # Container config
-├── requirements.txt       # Dependencies
-└── .github/workflows/     # CI/CD pipeline
-
+├── Dockerfile             # Container config  
+├── requirements.txt       # Dependencies  
+└── .github/workflows/     # CI/CD pipeline  
 
 **Setup & Run (Local)**
 
@@ -66,7 +66,26 @@ python app.py
  Access: http://localhost:5000
 
 
+ **Jenkins Build:**
+ 1. Build Custom Jenkins image using docker file https://github.com/veronica-1982/ACEest/blob/main/Jenkins.Dockerfile
+ 2. Run the Jenkins container docker run -d `  -p 8080:8080 -p 50000:50000 `    --network bridge --name jenkins3 `  jenkinspython
+    <img width="1600" height="948" alt="image" src="https://github.com/user-attachments/assets/7660667e-ae5b-491c-8dc6-af97499d7053" />
 
-**Pipeline Triggered on:**
+ 3. Create a Pipeline App, Here is the jenkins file content https://github.com/veronica-1982/ACEest/blob/main/Jenkinsfile
+ <img width="1600" height="604" alt="image" src="https://github.com/user-attachments/assets/8d2e0573-fd82-4b58-9306-9a730d53985f" />
+ 4. Trigger the build
+ <img width="1312" height="716" alt="image" src="https://github.com/user-attachments/assets/56313564-499f-4525-9af8-5123f2aa5b1b" />
+<img width="1600" height="531" alt="image" src="https://github.com/user-attachments/assets/11fcf51d-b448-450b-ac34-723b4353b2f5" />
+<img width="1600" height="921" alt="image" src="https://github.com/user-attachments/assets/211084ba-7d3c-4bcb-93a8-60b5f74ec5a0" />
+<img width="1600" height="880" alt="image" src="https://github.com/user-attachments/assets/10817158-55e7-4f5b-ad16-3f5444cda7a7" />
+<img width="1600" height="880" alt="image" src="https://github.com/user-attachments/assets/ada6cec0-ee08-4027-81f7-5662b82c7879" />
+<img width="1600" height="888" alt="image" src="https://github.com/user-attachments/assets/cfe8c7ca-2e3e-4b72-998d-5557d72dc951" />
+<img width="1600" height="929" alt="image" src="https://github.com/user-attachments/assets/07cee462-c1c8-49da-8690-7eb127a5b811" />
+<img width="1600" height="882" alt="image" src="https://github.com/user-attachments/assets/f6621908-3a58-42ee-863c-c7e0befa04d7" />
+5. Here is the build log https://github.com/veronica-1982/ACEest/blob/main/Jenkins_Build.logs
+
+
+
+**GitHub Action Pipeline Triggered on:** https://github.com/veronica-1982/ACEest/actions
 - Push to main
 - PR merge to main
