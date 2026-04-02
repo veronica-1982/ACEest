@@ -89,3 +89,22 @@ python app.py
 **GitHub Action Pipeline Triggered on:** https://github.com/veronica-1982/ACEest/actions
 - Push to main
 - PR merge to main
+
+**Job 1: Lint**
+- Runs flake8 for code quality checks
+- Detects syntax errors and style issues
+flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+flake8 . --max-line-length=120 --exit-zero --statistics
+
+**Job 2: Build & Test**
+- Runs only if lint passes.
+
+Steps:
+- Build Docker image
+- Run unit tests using pytest
+- Start container
+- Perform health check using curl
+docker build -t fitness-app .
+docker run --rm fitness-app pytest -v
+docker run -d -p 5000:5000 --name test_container fitness-app
+curl http://localhost:5000
