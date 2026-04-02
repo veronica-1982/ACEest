@@ -1,0 +1,62 @@
+name: ACEACEest Deployment Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+  pull_request:
+    branches: [ "main" ]
+    types: [ closed ]
+
+jobs:
+
+  lint:
+    if: github.event_name == 'push' || github.event.pull_request.merged == true
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Lint Dependencies
+        run: pip install flake8
+
+      - name: Run flake8
+        run: |
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 . --max-line-length=120 --statistics
+
+  build-test:
+    needs: lint
+    if: github.event_name == 'push' || github.event.pull_request.merged == true
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Debug Structure
+        run: ls -R
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Image
+        run: docker build -t fitness-app .
+
+      - name: Run Pytest
+        run: docker run --rm fitness-app pytest -v
+
+      - name: Run App and Health Check
+        run: |
+          docker run -d -p 5000:5000 --name test_container fitness-app
+          sleep 5
+          curl --fail http://localhost:5000 || exit 1
+          docker stop test_container
