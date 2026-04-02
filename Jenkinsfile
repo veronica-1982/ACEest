@@ -9,29 +9,30 @@ pipeline {
 
     stages {
 
-
         stage('Checkout') {
             steps {
                 git url: "${REPO_URL}", branch: "${BRANCH}"
             }
         }
 
-   
         stage('Setup Environment') {
             steps {
                 sh '''
                 python3 --version
 
-                # Install dependencies
+                python3 -m venv $VENV_DIR
+                . $VENV_DIR/bin/activate
+
+                pip install --upgrade pip
                 pip install -r requirements.txt
                 '''
             }
         }
 
-  
         stage('Lint') {
             steps {
                 sh '''
+                . $VENV_DIR/bin/activate
                 pip install flake8
                 flake8 . --max-line-length=120 --exit-zero
                 '''
@@ -41,6 +42,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
+                . $VENV_DIR/bin/activate
                 pytest -v
                 '''
             }
@@ -49,6 +51,7 @@ pipeline {
         stage('Run App') {
             steps {
                 sh '''
+                . $VENV_DIR/bin/activate
                 nohup python3 app.py > app.log 2>&1 &
                 '''
             }
@@ -64,7 +67,7 @@ pipeline {
 
     post {
         always {
-            echo "Cleaning up..."
+            echo " Cleaning up..."
             sh '''
             pkill -f "python3 app.py" || true
             '''
