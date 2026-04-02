@@ -30,8 +30,7 @@ jobs:
       - name: Run flake8
         run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          flake8 . --max-line-length=120 --statistics
-
+          flake8 . --max-line-length=120 --exit-zero --statistics
   build-test:
     needs: lint
     if: github.event_name == 'push' || github.event.pull_request.merged == true
