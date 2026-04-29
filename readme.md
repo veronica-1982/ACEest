@@ -114,10 +114,10 @@ curl http://localhost:5000
 
 ---
 
-**Assignment - 2**
+## Assignment - 2
 
 GitHub Push → Jenkins (Build) → Pytest → SonarQube → Docker Build → Docker Hub → Kubernetes Deploy
-## Jenkins Stages
+**Jenkins Stages**
 Orchestrated a multi-stage Jenkins pipeline that automates the lifecycle from code checkout and dependency installation to linting, testing, and final deployment.
 
 Multi-stage pipeline that automates the full delivery lifecycle:
