@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: aceest
-        image: nginx:1.25
+        image: 2024tm93552/aceest:v1
         ports:
-        - containerPort: 80
+        - containerPort: 5000
