@@ -116,9 +116,23 @@ curl http://localhost:5000
 
 **Assignment - 2**
 
-**Jenkins Stages:**
-
+GitHub Push → Jenkins (Build) → Pytest → SonarQube → Docker Build → Docker Hub → Kubernetes Deploy
+## Jenkins Stages
 Orchestrated a multi-stage Jenkins pipeline that automates the lifecycle from code checkout and dependency installation to linting, testing, and final deployment.
+
+Multi-stage pipeline that automates the full delivery lifecycle:
+
+| Stage | Description |
+|-------|-------------|
+| Checkout | Pulls latest code from GitHub |
+| Install Dependencies | Installs Python packages from requirements.txt |
+| Lint | Runs flake8 for code style checks |
+| Test | Executes Pytest unit tests |
+| SonarQube Analysis | Static code analysis & quality gate |
+| Docker Build & Push | Builds image and pushes to Docker Hub |
+| Deploy | Applies Kubernetes manifests to Minikube |
+
+
 
 <img width="1600" height="746" alt="jenkinsstages" src="https://github.com/user-attachments/assets/924f201e-0337-4bdb-98bf-709ab2eb9557" />
 
@@ -134,6 +148,10 @@ Integrated SonarQube for static code analysis to monitor code health, identify s
 
 Automated the creation of Docker images and their publication to Docker Hub, ensuring consistent environment packaging.
 
+docker pull 2024tm93552/aceest-fitness:latest
+
+docker pull 2024tm93552/aceest-fitness:v1
+
 <img width="1920" height="904" alt="DockerHub" src="https://github.com/user-attachments/assets/480da292-3bba-4ec2-9937-6d1fbdacc75f" />
 
 
@@ -146,13 +164,31 @@ Managed application workloads on a Minikube Kubernetes cluster, utilizing pods a
 
 
 **Kubernetes Pods:**
-
+```bash
+minikube start
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl get pods
+kubectl get svc
+```
 <img width="1213" height="261" alt="pods" src="https://github.com/user-attachments/assets/31194a9b-c0c7-4e75-bce3-8fd5b9f73ca1" />
 
 
 **Deployment Strategy:**
 
 Implemented a Blue-Green Deployment strategy to facilitate seamless updates and instant rollback capabilities without service interruption.
+
+Seamless zero-downtime updates with instant rollback capability.
+
+```
+Traffic → Service (selector: version=blue)
+                ↓ switch
+Traffic → Service (selector: version=green)
+```
+
+
+
+---
 
 <img width="751" height="298" alt="bluedeployment" src="https://github.com/user-attachments/assets/fb05e553-dbb3-4ca9-a7a0-ee41b2935f1f" />
 
