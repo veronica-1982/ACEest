@@ -112,5 +112,69 @@ curl http://localhost:5000
 <img width="1570" height="918" alt="image" src="https://github.com/user-attachments/assets/07149dd6-6581-4c1f-b339-8f2e6571be93" />
 <img width="1561" height="946" alt="image" src="https://github.com/user-attachments/assets/91c00030-b2a3-4e0f-9171-2884d7aab35f" />
 
+---
+
+**Assignment - 2**
+
+**Jenkins Stages:**
+
+Orchestrated a multi-stage Jenkins pipeline that automates the lifecycle from code checkout and dependency installation to linting, testing, and final deployment.
+
+<img width="1600" height="746" alt="jenkinsstages" src="https://github.com/user-attachments/assets/924f201e-0337-4bdb-98bf-709ab2eb9557" />
+
+
+**Sonarqube Analzes:**
+
+Integrated SonarQube for static code analysis to monitor code health, identify security vulnerabilities, and ensure maintainability standards.
+
+<img width="1600" height="791" alt="Sonarqube" src="https://github.com/user-attachments/assets/0a20b662-ef24-488c-add5-be3007d9c003" />
+
+
+**Docker Hub:**
+
+Automated the creation of Docker images and their publication to Docker Hub, ensuring consistent environment packaging.
+
+<img width="1920" height="904" alt="DockerHub" src="https://github.com/user-attachments/assets/480da292-3bba-4ec2-9937-6d1fbdacc75f" />
+
+
+**Minikube:**
+
+Managed application workloads on a Minikube Kubernetes cluster, utilizing pods and services for scalable infrastructure.
+
+
+<img width="1206" height="335" alt="Minikube" src="https://github.com/user-attachments/assets/e1991c1d-68e8-4057-822a-6168a8a5e526" />
+
+
+**Kubernetes Pods:**
+
+<img width="1213" height="261" alt="pods" src="https://github.com/user-attachments/assets/31194a9b-c0c7-4e75-bce3-8fd5b9f73ca1" />
+
+
+**Deployment Strategy:**
+
+Implemented a Blue-Green Deployment strategy to facilitate seamless updates and instant rollback capabilities without service interruption.
+
+<img width="751" height="298" alt="bluedeployment" src="https://github.com/user-attachments/assets/fb05e553-dbb3-4ca9-a7a0-ee41b2935f1f" />
+
+
+<img width="1920" height="1080" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/c8b6a74b-21d3-49b8-bbca-c144172b5cf8" />
+
+
+<img width="756" height="294" alt="greendeployment" src="https://github.com/user-attachments/assets/b86b8cc4-b3c9-4ef3-aef1-b4a02702569d" />
+
+
+<img width="1920" height="1080" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/480ca89e-7493-48bb-9041-a8d964a017ed" />
+
+
+
+
+
+
+
+
+
+
+
+
 
 
