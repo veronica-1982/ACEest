@@ -117,7 +117,9 @@ curl http://localhost:5000
 ## Assignment - 2 (SonarQube,Docker Build,Docker Hub and Deployment strategies using K8)
 
 GitHub Push → Jenkins (Build) → Pytest → SonarQube → Docker Build → Docker Hub → Kubernetes Deploy
-**Jenkins Stages**
+
+**1.Jenkins Stages**
+
 Orchestrated a multi-stage Jenkins pipeline that automates the lifecycle from code checkout and dependency installation to linting, testing, and final deployment.
 
 Multi-stage pipeline that automates the full delivery lifecycle:
@@ -137,14 +139,14 @@ Multi-stage pipeline that automates the full delivery lifecycle:
 <img width="1600" height="746" alt="jenkinsstages" src="https://github.com/user-attachments/assets/924f201e-0337-4bdb-98bf-709ab2eb9557" />
 
 
-**Sonarqube Analzes:**
+**2.Sonarqube Analzes:**
 
 Integrated SonarQube for static code analysis to monitor code health, identify security vulnerabilities, and ensure maintainability standards.
 
 <img width="1600" height="791" alt="Sonarqube" src="https://github.com/user-attachments/assets/0a20b662-ef24-488c-add5-be3007d9c003" />
 
 
-**Docker Hub:**
+**3.Docker Hub:**
 
 Automated the creation of Docker images and their publication to Docker Hub, ensuring consistent environment packaging.
 
@@ -159,7 +161,7 @@ https://hub.docker.com/repository/docker/2024tm93552/aceest
 <img width="1920" height="1080" alt="DockerHub2" src="https://github.com/user-attachments/assets/ac0727fb-eb66-42a5-82b9-01a4a479caf0" />
 
 
-**Minikube:**
+**4.Minikube:**
 
 Managed application workloads on a Minikube Kubernetes cluster, utilizing pods and services for scalable infrastructure.
 
@@ -167,12 +169,12 @@ Managed application workloads on a Minikube Kubernetes cluster, utilizing pods a
 <img width="1206" height="335" alt="Minikube" src="https://github.com/user-attachments/assets/e1991c1d-68e8-4057-822a-6168a8a5e526" />
 
 
-**Kubernetes Pods:**
+**5.Kubernetes Pods:**
 
 <img width="1213" height="261" alt="pods" src="https://github.com/user-attachments/assets/31194a9b-c0c7-4e75-bce3-8fd5b9f73ca1" />
 
 
-**Deployment Strategy:**
+**6.Deployment Strategy:**
 
 Implemented a Blue-Green Deployment strategy to facilitate seamless updates and instant rollback capabilities without service interruption.
 
