@@ -139,11 +139,12 @@ Multi-stage pipeline that automates the full delivery lifecycle:
 <img width="1600" height="746" alt="jenkinsstages" src="https://github.com/user-attachments/assets/924f201e-0337-4bdb-98bf-709ab2eb9557" />
 
 
-**2.Sonarqube Analzes:**
+**2.Sonarqube Analyzer:**
 
 Integrated SonarQube for static code analysis to monitor code health, identify security vulnerabilities, and ensure maintainability standards.
 
-<img width="1600" height="791" alt="Sonarqube" src="https://github.com/user-attachments/assets/0a20b662-ef24-488c-add5-be3007d9c003" />
+<img width="1920" height="1080" alt="sonarqube" src="https://github.com/user-attachments/assets/2af48ab4-a811-4d7d-8497-9018aebab7fe" />
+
 
 
 **3.Docker Hub:**
