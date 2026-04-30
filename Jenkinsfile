@@ -12,7 +12,7 @@ pipeline {
 
         SONAR_TOKEN = credentials('sonar-token')
 
-        SONAR_HOST_URL = "http://YOUR_SONAR_HOST:9000"
+        SONAR_HOST_URL = "http://localhost:9000"
 
         KUBECONFIG = "$HOME/.kube/config"
     }
