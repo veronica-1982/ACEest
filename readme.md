@@ -114,7 +114,7 @@ curl http://localhost:5000
 
 ---
 
-## Assignment - 2
+## Assignment - 2 (
 
 GitHub Push → Jenkins (Build) → Pytest → SonarQube → Docker Build → Docker Hub → Kubernetes Deploy
 **Jenkins Stages**
@@ -153,6 +153,8 @@ docker pull 2024tm93552/aceest-fitness:latest
 docker pull 2024tm93552/aceest-fitness:v1
 
 <img width="1920" height="904" alt="DockerHub" src="https://github.com/user-attachments/assets/480da292-3bba-4ec2-9937-6d1fbdacc75f" />
+<img width="1920" height="1080" alt="DockerHub1" src="https://github.com/user-attachments/assets/0f99229e-2e5a-4712-8104-b774c9f7c710" />
+<img width="1920" height="1080" alt="DockerHub2" src="https://github.com/user-attachments/assets/ac0727fb-eb66-42a5-82b9-01a4a479caf0" />
 
 
 **Minikube:**
@@ -190,13 +192,14 @@ Traffic → Service (selector: version=green)
 
 ---
 
-<img width="751" height="298" alt="bluedeployment" src="https://github.com/user-attachments/assets/fb05e553-dbb3-4ca9-a7a0-ee41b2935f1f" />
+<img width="751" height="298" alt="bluedeployment" src="https://github.com/user-attachments/assets/fb05e553-dbb3-4ca9-a7a0-ee41b2935f1f" /><img width="1262" height="545" alt="WhatsApp Image 2026-04-28 at 17 23 40" src="https://github.com/user-attachments/assets/ca53a75f-838e-4883-826f-f8375a684e92" />
+
 
 
 <img width="1920" height="1080" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/c8b6a74b-21d3-49b8-bbca-c144172b5cf8" />
+<img width="1260" height="535" alt="Greendeployment" src="https://github.com/user-attachments/assets/e38985ac-da9f-4bc3-b8de-f7f5ce46d21d" />
 
 
-<img width="756" height="294" alt="greendeployment" src="https://github.com/user-attachments/assets/b86b8cc4-b3c9-4ef3-aef1-b4a02702569d" />
 
 
 <img width="1920" height="1080" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/480ca89e-7493-48bb-9041-a8d964a017ed" />
