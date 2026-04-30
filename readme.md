@@ -152,6 +152,8 @@ docker pull 2024tm93552/aceest-fitness:latest
 
 docker pull 2024tm93552/aceest-fitness:v1
 
+https://hub.docker.com/repository/docker/2024tm93552/aceest
+
 <img width="1920" height="904" alt="DockerHub" src="https://github.com/user-attachments/assets/480da292-3bba-4ec2-9937-6d1fbdacc75f" />
 <img width="1920" height="1080" alt="DockerHub1" src="https://github.com/user-attachments/assets/0f99229e-2e5a-4712-8104-b774c9f7c710" />
 <img width="1920" height="1080" alt="DockerHub2" src="https://github.com/user-attachments/assets/ac0727fb-eb66-42a5-82b9-01a4a479caf0" />
@@ -166,13 +168,7 @@ Managed application workloads on a Minikube Kubernetes cluster, utilizing pods a
 
 
 **Kubernetes Pods:**
-```bash
-minikube start
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
-kubectl get pods
-kubectl get svc
-```
+
 <img width="1213" height="261" alt="pods" src="https://github.com/user-attachments/assets/31194a9b-c0c7-4e75-bce3-8fd5b9f73ca1" />
 
 
