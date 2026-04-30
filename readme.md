@@ -114,7 +114,7 @@ curl http://localhost:5000
 
 ---
 
-## Assignment - 2 (
+## Assignment - 2 (SonarQube,Docker Build,Docker Hub and Deployment strategies using K8)
 
 GitHub Push → Jenkins (Build) → Pytest → SonarQube → Docker Build → Docker Hub → Kubernetes Deploy
 **Jenkins Stages**
