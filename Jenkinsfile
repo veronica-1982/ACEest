@@ -103,7 +103,7 @@ pipeline {
         stage('Deploy to Minikube') {
             steps {
                 sh '''
-                sed -i "s|YOUR_DOCKERHUB_USERNAME/aceest:latest|$IMAGE_NAME:latest|g" deployment.yaml
+                sed -i "s|2024tm93552/aceest/aceest:latest|$IMAGE_NAME:latest|g" deployment.yaml
 
                 kubectl apply -f deployment.yaml
 
